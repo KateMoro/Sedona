@@ -1,0 +1,176 @@
+/* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Variables */
+
+:root {
+  --primary-dark: #000000;
+  --primary-dark-opacity: rgba(0, 0, 0, 0.3);
+  --secondary-dark: #333333;
+  --primary-light: #ffffff;
+  --primary-light-opacity: rgba(255, 255, 255, 0.3);
+  --accent: #81B3D2;
+  --accent-2: #669EC0;
+  --accent-3: #5496BD;
+  --special: #766357;
+  --special-2: #604E43;
+  --special-3: #503E33;
+  --inner-bg: #eeeeee;
+  --footer-bg: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Global */
+
+.page-body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  background-color: var(--primary-light);
+}
+
+a {
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Navigation */
+
+.main-nav-list {
+  list-style: none;
+}
+
+.main-nav-link:hover {
+  color: var(--accent);
+}
+
+.main-nav-link:focus {
+  color: var(--special);
+}
+
+.main-nav-link:active {
+  color: var(--primary-dark-opacity);
+}
+
+
+/* Main */
+
+.intro {
+  background-color: var(--secondary-dark);
+}
+
+.slogan {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.text {
+  line-height: 26px;
+  color: var(--secondary-dark);
+}
+
+.first-reason,
+.second-reason {
+  color: var(--primary-light);
+  background-color: var(--accent);
+}
+
+.first-reason h2,
+.second-reason h2 {
+  font-size: 21px;
+}
+
+.reasons-inner {
+  background-color: var(--inner-bg);
+}
+
+.reasons-inner h2 {
+  font-size: 21px;
+}
+
+.reasons-inner p {
+  color: var(--secondary-dark);
+}
+
+.advice-list {
+  list-style: none;
+}
+
+.advice-list h3 {
+  font-size: 21px;
+}
+
+.advice-list p {
+  color: var(--secondary-dark);
+}
+
+.hotels-booking p:first-of-type {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.hotels-booking p:nth-of-type(2) {
+  color: var(--secondary-dark);
+}
+
+.hotels-booking button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  background-color: var(--special);
+  border: none;
+}
+
+.hotels-booking button:hover {
+  background-color: var(--special-2);
+}
+
+.hotels-booking button:active {
+  color: var(--primary-light-opacity);
+  background-color: var(--special-3);
+}
+
+/* Footer */
+
+.page-footer {
+  background-color: var(--footer-bg);
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.footer-copyright {
+  line-height: 26px;
+}

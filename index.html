@@ -1,70 +1,86 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body>
-  <header>
-    <nav>
-      <a>
+
+<body class="page-body">
+  <header class="page-header">
+    <nav class="main-nav">
+      <a class="main-nav-logo">
         <img src="img/sedona-logo.svg" width="138" height="70" alt="Логотип «Седона»">
       </a>
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
+      <ul class="main-nav-list">
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#">Информация</a>
+        </li>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#">Фото и видео</a>
+        </li>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="#">Карта штата</a>
+        </li>
+        <li class="main-nav-item">
+          <a class="main-nav-link" href="catalog.html">Гостиницы</a>
+        </li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="container">
     <h1>Онлайн-сервис для поиска и бронирования гостиниц в городе Седона</h1>
-    <img src="img/welcome-to-sedona.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona">
-    <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-    <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-    <section>
+    <div class="intro">
+      <img src="img/welcome-to-sedona.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona">
+    </div>
+    <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+    <p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    <section class="first-reason">
       <h2>Настоящий городок</h2>
       <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
     </section>
-    <section>
+    <section class="advice">
       <h2>Рекомендации</h2>
-      <ul>
-        <li>
+      <ul class="advice-list">
+        <li class="advice-item">
           <h3>Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li>
+        <li class="advice-item">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li>
+        <li class="advice-item">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="second-reason">
       <h2>Там есть мост дьявола</h2>
       <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </section>
-    <section>
-      <h2>Небольшая площадь</h2>
-      <p>Все достопримечательности находятся очень близко</p>
-    </section>
-    <section>
-      <h2>Красивая дорога</h2>
-      <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
-    </section>
-    <section>
-      <h2>Мало туристов</h2>
-      <p>Большинство едет в гранд каньон и толпится там</p>
-    </section>
-    <section>
+    <div class="reasons-inner">
+      <section class="third-reason">
+        <h2>Небольшая площадь</h2>
+        <p>Все достопримечательности находятся очень близко</p>
+      </section>
+      <section class="fourth-reason">
+        <h2>Красивая дорога</h2>
+        <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+      </section>
+      <section class="fifth-reason">
+        <h2>Мало туристов</h2>
+        <p>Большинство едет в гранд каньон и толпится там</p>
+      </section>
+    </div>
+    <section class="hotels-booking">
       <h2>Бронирование гостиницы</h2>
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
@@ -72,28 +88,35 @@
       <!-- Здесь будут карта и всплывающее окно  -->
     </section>
   </main>
-  <footer>
-    <div>
+  <footer class="page-footer">
+    <div class="footer-contacts">
       <p>
-        <a href="#">#visitSEDONA</a>
+        <a class="footer-link" href="#">#visitSEDONA</a>
       </p>
       <p>
-        ТЕЛ:<a href="tel:+74956660166">+7(495) 666-01-66</a>
+        ТЕЛ:<a class="footer-phone" href="tel:+74956660166"> +7(495) 666-01-66</a>
       </p>
     </div>
-    <section>
+    <section class="footer-socials">
       <h2>Социальные сети</h2>
-      <ul>
-        <li><a href="#">Твиттер</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Ютуб</a></li>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="socials-link" href="#">Твиттер</a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link" href="#">Фейсбук</a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link" href="#">Ютуб</a>
+        </li>
       </ul>
     </section>
-    <p>Website by
+    <p class="footer-copyright">Website by
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/htmlacademy-logo.svg" width="114" height="40" alt="Логотип HTML Academy">
       </a>
     </p>
   </footer>
 </body>
+
 </html>
