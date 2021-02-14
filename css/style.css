@@ -34,19 +34,29 @@
   --inner-bg: #eeeeee;
   --footer-bg: rgba(255, 255, 255, 0.9);
   --catalog-border: #E5E5E5;
+  --page-body-bg-shadow: rgba(0, 1, 1, 0.2);
 }
 
 
 /* Global */
 
+.page {
+  height: 100%;
+}
+
 .page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
   font-family: 'PT Sans', sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: var(--primary-dark);
   text-transform: uppercase;
-  background-color: var(--primary-light);
+  background-color: var(--secondary-light);
 }
 
 img {
@@ -54,11 +64,42 @@ img {
   height: auto;
 }
 
+.page-body-bg {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--primary-light);
+  box-shadow: 0 5px 15px 0 var(--page-body-bg-shadow);
+}
 
 /* Navigation */
+.main-nav {
+  display: grid;
+}
+
+.main-nav-logo {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  justify-self: center;
+  z-index: 1;
+}
 
 .main-nav-list {
+  margin: 0;
+  padding: 15px 72px;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
   list-style: none;
+}
+
+.main-nav-item-left {
+  justify-self: start;
+}
+
+.main-nav-item-right {
+  justify-self: end;
 }
 
 .main-nav-link {
@@ -84,22 +125,35 @@ img {
 /* Intro */
 
 .intro {
+  height: 509px;
+  box-sizing: border-box;
+  padding-top: 77px;
+  text-align: center;
   background-color: var(--secondary-dark);
+  background-image: url("../img/bg-photo-mask.svg"), url("../img/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center, top center;
 }
 
 .slogan {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 .text {
   line-height: 26px;
   color: var(--secondary-dark);
+  text-align: center;
 }
 
 
 /* Reasons */
+
+.reason {
+  text-align: center;
+}
 
 .reason-heading {
   font-size: 21px;
@@ -115,6 +169,9 @@ img {
 }
 
 .reasons-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
   background-color: var(--inner-bg);
 }
 
@@ -126,7 +183,16 @@ img {
 /* Advices */
 
 .advice-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
   list-style: none;
+}
+
+.advice-item {
+  text-align: center;
 }
 
 .advice-item-heading {
@@ -143,10 +209,12 @@ img {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-align: center;
 }
 
 .hotels-booking-text {
   color: var(--secondary-dark);
+  text-align: center;
 }
 
 .hotels-booking-button {
@@ -314,7 +382,10 @@ img {
 /* Footer */
 
 .page-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--footer-bg);
+  text-align: center;
 }
 
 .footer-contacts {
