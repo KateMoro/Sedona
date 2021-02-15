@@ -12,8 +12,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<div class="page-body-bg">
-  <body class="page-body">
+<body class="page-body">
+  <div class="container">
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav-logo">
@@ -35,7 +35,7 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
+    <main>
       <h1>Онлайн-сервис для поиска и бронирования гостиниц в городе Седона</h1>
       <div class="intro">
         <img src="img/welcome-to-sedona.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona">
@@ -43,8 +43,11 @@
       <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <section class="reason reason-large">
-        <h2 class="reason-heading">Настоящий городок</h2>
-        <p class="reason-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        <div class="reason-large-inner">
+          <h2 class="reason-heading">Настоящий городок</h2>
+          <p class="reason-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <img src="img/sedona-cityscape.jpg" width="800" height="256" alt="Городской пейзаж">
       </section>
       <section class="advice">
         <h2>Рекомендации</h2>
@@ -63,9 +66,12 @@
           </li>
         </ul>
       </section>
-      <section class="reason reason-large">
-        <h2 class="reason-heading">Там есть мост дьявола</h2>
-        <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      <section class="reason reason-large reason-reverse">
+        <div class="reason-large-inner">
+          <h2 class="reason-heading">Там есть мост дьявола</h2>
+          <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+        <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
       </section>
       <div class="reasons-inner">
         <section class="reason">
@@ -119,7 +125,7 @@
         </a>
       </p>
     </footer>
-  </body>
-</div>
+  </div>
+</body>
 
 </html>
