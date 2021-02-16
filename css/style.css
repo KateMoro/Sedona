@@ -268,13 +268,31 @@ img {
   background-color: var(--secondary-dark);
 }
 
+.filter-form {
+  padding: 30px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.filter-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .filter-legend {
   font-size: 16px;
   font-weight: 700;
 }
 
 .filter-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.filter-item {
+  margin-top: 25px;
 }
 
 .filter-button {
@@ -293,6 +311,14 @@ img {
 }
 
 /* Search results */
+
+.search-results-inner {
+  padding: 30px 72px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 30px;
+}
+
 .found {
   font-size: 21px;
   line-height: 26px;
@@ -334,16 +360,26 @@ img {
 
 /* Catalog */
 
-.catalog-list {
+.hotels-catalog-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.catalog-item {
+.hotels-catalog-item {
+  padding: 30px 72px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 30px;
   border-top: 1px solid var(--catalog-border);
 }
 
-.catalog-item:last-of-type {
+.hotels-catalog-item:last-of-type {
   border-bottom: 1px solid var(--catalog-border);
+}
+
+.hotel-name {
+  margin: 0;
 }
 
 .hotel-name-link {
