@@ -454,6 +454,14 @@ img {
   font-weight: 700;
 }
 
+.socials-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer-link,
 .footer-phone {
   color: var(--primary-dark);
@@ -461,5 +469,8 @@ img {
 }
 
 .footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 26px;
 }
