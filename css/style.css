@@ -138,9 +138,8 @@ img {
 /* Intro */
 
 .intro {
-  height: 509px;
-  box-sizing: border-box;
   padding-top: 77px;
+  padding-bottom: 82px;
   text-align: center;
   background-color: var(--secondary-dark);
   background-image: url("../img/bg-photo-mask.svg"), url("../img/index-background.jpg");
@@ -170,12 +169,43 @@ img {
 
 .reason-heading {
   margin: 0;
-  margin-bottom: 70px;
+  padding: 0 70px;
   font-size: 21px;
 }
 
 .reason-text {
+  position: relative;
   margin: 0;
+  padding-top: 69px;
+}
+
+.reason-text::before {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  width: 51px;
+  height: 21px;
+  margin-left: -25px;
+}
+
+.reason-one::before {
+  content: "— №1 —";
+}
+
+.reason-two::before {
+  content: "— №2 —";
+}
+
+.reason-three::before {
+  content: "— №3 —";
+}
+
+.reason-four::before {
+  content: "— №4 —";
+}
+
+.reason-five::before {
+  content: "— №5 —";
 }
 
 .reason-large {
@@ -218,21 +248,54 @@ img {
 
 .advice-list {
   margin: 0;
-  padding: 160px 65px 80px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 100px;
   list-style: none;
 }
 
 .advice-item {
+  padding: 160px 50px 80px;
   text-align: center;
 }
 
 .advice-item-heading {
+  position: relative;
   margin: 0;
   margin-bottom: 25px;
   font-size: 21px;
+}
+
+.advice-item-heading::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+
+}
+
+.house-icon::before {
+  margin-left: -38px;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icons/house-icon.svg");
+
+}
+
+.food-icon::before {
+  margin-left: -38px;
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/icons/food-icon.svg");
+
+}
+
+.gift-icon::before {
+  margin-left: -32px;
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/icons/gift-icon.svg");
+
 }
 
 .advice-item-text {
