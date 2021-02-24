@@ -99,21 +99,24 @@ img {
 
 .main-nav-list {
   margin: 0;
-  padding: 15px 72px;
+  padding: 14px 72px;
   grid-column: 1/-1;
   grid-row: 1/-1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 15px;
+  display: flex;
   list-style: none;
 }
 
-.main-nav-item-left {
-  justify-self: start;
+.main-nav-item {
+  width: 228px;
 }
 
-.main-nav-item-right {
-  justify-self: end;
+.main-nav-item:nth-child(3) {
+  margin-left: auto;
+}
+
+.main-nav-item:nth-child(3),
+.main-nav-item:nth-child(4) {
+  text-align: end;
 }
 
 .main-nav-link {
@@ -135,12 +138,17 @@ img {
   color: var(--primary-dark-opacity);
 }
 
+/* Main */
+
+.page-main {
+  margin-top: -20px;
+}
 
 /* Intro */
 
 .intro {
   padding-top: 77px;
-  padding-bottom: 82px;
+  padding-bottom: 76px;
   text-align: center;
   background-color: var(--secondary-dark);
   background-image: url("../img/bg-photo-mask.svg"), url("../img/index-background.jpg");
@@ -149,6 +157,8 @@ img {
 }
 
 .slogan {
+  margin: 0;
+  padding: 40px 378px 46px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -156,6 +166,8 @@ img {
 }
 
 .text {
+  margin: 0;
+  margin-bottom: 52px;
   line-height: 26px;
   color: var(--secondary-dark);
   text-align: center;
@@ -170,19 +182,19 @@ img {
 
 .reason-heading {
   margin: 0;
-  padding: 0 70px;
+  padding: 0 71px;
   font-size: 21px;
 }
 
 .reason-text {
   position: relative;
   margin: 0;
-  padding-top: 69px;
+  padding-top: 71px;
 }
 
 .reason-text::before {
   position: absolute;
-  top: 23px;
+  top: 27px;
   left: 50%;
   width: 51px;
   height: 21px;
@@ -195,6 +207,7 @@ img {
 
 .reason-two::before {
   content: "— №2 —";
+  top: 23px;
 }
 
 .reason-three::before {
@@ -216,7 +229,7 @@ img {
 }
 
 .reason-large-inner {
-  padding: 50px;
+  padding: 46px;
 }
 
 .reason-reverse {
@@ -232,12 +245,25 @@ img {
   color: var(--primary-light);
 }
 
+.reason-reverse .reason-heading {
+  padding: 4px 79px;
+}
+
+.reason-reverse .reason-text {
+  padding-top: 67px;
+}
+
 .reasons-inner {
-  padding: 50px 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 100px;
   background-color: var(--inner-bg);
+}
+
+.reasons-inner .reason {
+  padding-top: 47px;
+  padding-left: 70px;
+  padding-right: 71px;
+  padding-bottom: 56px;
 }
 
 .reasons-inner .reason-text {
@@ -256,47 +282,43 @@ img {
 }
 
 .advice-item {
-  padding: 160px 50px 80px;
+  position: relative;
+  padding: 158px 50px 81px;
   text-align: center;
 }
 
-.advice-item-heading {
-  position: relative;
-  margin: 0;
-  margin-bottom: 25px;
-  font-size: 21px;
-}
-
-.advice-item-heading::before {
+.advice-item::before {
   content: "";
   position: absolute;
-  top: -100px;
   left: 50%;
-
+  transform: translate(-50%);
 }
 
 .house-icon::before {
-  margin-left: -38px;
+  top: 59px;
   width: 75px;
   height: 72px;
   background-image: url("../img/icons/house-icon.svg");
-
 }
 
 .food-icon::before {
-  margin-left: -38px;
+  top: 61px;
   width: 75px;
   height: 70px;
   background-image: url("../img/icons/food-icon.svg");
-
 }
 
 .gift-icon::before {
-  margin-left: -32px;
+  top: 55px;
   width: 64px;
   height: 77px;
   background-image: url("../img/icons/gift-icon.svg");
+}
 
+.advice-item-heading {
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 21px;
 }
 
 .advice-item-text {
@@ -307,18 +329,28 @@ img {
 /* Booking */
 
 .hotels-booking-large-text {
+  margin-top: 56px;
+  margin-left: -10px;
+  margin-bottom: 34px;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 24px;
   font-weight: 700;
   text-align: center;
 }
 
 .hotels-booking-text {
+  margin: 0;
+  margin-bottom: 43px;
+  line-height: 24px;
   color: var(--secondary-dark);
   text-align: center;
 }
 
 .hotels-booking-button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 30px 139px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -580,6 +612,7 @@ img {
 }
 
 .footer-contacts {
+  padding-left: 71px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -610,7 +643,11 @@ img {
 }
 
 .socials-item {
-  margin-right: 6px;
+  margin-right: 4px;
+}
+
+.socials-item:last-of-type {
+  margin: 0;
 }
 
 .socials-link {
@@ -636,8 +673,9 @@ img {
 
 .footer-copyright {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-top: 5px;
+  padding-left: 65px;
   line-height: 26px;
 }
 
