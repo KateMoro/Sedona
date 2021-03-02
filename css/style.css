@@ -58,7 +58,7 @@
 
 .page-body {
   height: 100%;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -175,6 +175,7 @@ img {
   background-image: url("../img/bg-photo-mask.svg"), url("../img/index-background.jpg");
   background-repeat: no-repeat;
   background-position: bottom center, top center;
+  background-size: auto, cover;
 }
 
 .slogan {
@@ -556,6 +557,7 @@ img {
   background-image: url("../img/catalog-background.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: cover;
 }
 
 .filter-form {
@@ -878,7 +880,11 @@ img {
 }
 
 .hotel-type {
-  min-width: 116px;
+  min-width: 112px;
+}
+
+.hotel-price {
+  margin-left: 4px;
 }
 
 .item-rating {
@@ -891,6 +897,8 @@ img {
 
 .hotel-stars {
   position: relative;
+  height: 17px;
+
 }
 
 .hotel-stars::before {
