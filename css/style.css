@@ -112,6 +112,11 @@ img {
   z-index: 1;
 }
 
+.main-nav-logo[href]:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .main-nav-list {
   margin: 0;
   padding: 14px 72px;
@@ -152,10 +157,12 @@ img {
 
 .main-nav-link:focus {
   color: var(--special);
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .main-nav-link:active {
-  color: var(--primary-dark-opacity);
+ secondary-dark: var(--primary-dark-opacity);
 }
 
 
@@ -218,7 +225,7 @@ img {
   position: absolute;
   top: 27px;
   left: 50%;
-  width: 51px;
+  width: 53px;
   height: 21px;
   margin-left: -25px;
 }
@@ -268,7 +275,7 @@ img {
 }
 
 .reason-reverse .reason-heading {
-  padding: 4px 79px;
+  padding: 4px 75px;
 }
 
 .reason-reverse .reason-text {
@@ -282,10 +289,7 @@ img {
 }
 
 .reasons-inner .reason {
-  padding-top: 47px;
-  padding-left: 70px;
-  padding-right: 71px;
-  padding-bottom: 56px;
+  padding: 47px 70px 56px;
 }
 
 .reasons-inner .reason-text {
@@ -354,7 +358,7 @@ img {
 }
 
 .hotels-booking-large-text {
-  margin-top: 56px;
+  margin-top: 55px;
   margin-left: -10px;
   margin-bottom: 34px;
   font-size: 30px;
@@ -387,6 +391,11 @@ img {
 
 .hotels-booking-button:hover {
   background-color: var(--special-2);
+}
+
+.hotels-booking-button:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .hotels-booking-button:active {
@@ -503,6 +512,13 @@ img {
   padding: 14px 13px;
 }
 
+.button-calendar:focus,
+.button-minus:focus,
+.button-plus:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .button-calendar:hover path,
 .button-minus:hover rect,
 .button-plus:hover path {
@@ -530,10 +546,14 @@ img {
   background-color: var(--accent-2);
 }
 
+.booking-form-button:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .booking-form-button:active {
   color: var(--primary-light-opacity);
   background-color: var(--accent-3);
-  outline: none;
 }
 
 .img-map {
@@ -592,6 +612,11 @@ img {
   cursor: pointer;
   user-select: none;
   padding-left: 40px;
+}
+
+.filter-input-checkbox:focus + .filter-label::before {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .filter-input-checkbox + .filter-label::before {
@@ -675,7 +700,7 @@ img {
 
 .range-controls {
   position: relative;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .range-controls .scale {
@@ -692,9 +717,10 @@ img {
 
 .range-controls .toggle {
   position: absolute;
-  top: 11px;
-  width: 4px;
-  height: 4px;
+  left: 0;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 19px;
   background-color: var(--filter-toggle);
   border: 8px solid var(--primary-light);
   border-radius: 50%;
@@ -705,9 +731,14 @@ img {
 }
 
 .range-controls .toggle:hover {
-  width: 5px;
-  height: 5px;
+  width: 23px;
+  height: 23px;
   border: 9px solid var(--primary-light);
+}
+
+.range-controls .toggle:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .range-controls .toggle-min {
@@ -733,6 +764,11 @@ img {
 .filter-button:hover {
   color: var(--primary-dark);
   background-color: var(--primary-light);
+}
+
+.filter-button:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 /* Search results */
@@ -771,27 +807,6 @@ img {
   list-style: none;
 }
 
-.sort-order {
-  margin-left: auto;
-}
-
-.sort-order-item {
-  padding-top: 4px;
-  padding-left: 12px;
-}
-
-.sort-order-link-current path {
-  fill: var(--accent);
-}
-
-.sort-order-link:hover path {
-  fill: var(--primary-dark);
-}
-
-.sort-order-link:focus path {
-  fill: var(--accent);
-}
-
 .sort-item {
   margin-right: 32px;
 }
@@ -817,11 +832,45 @@ img {
 .sort-link:focus {
   color: var(--accent);
   border: none;
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .sort-link:active {
   color: var(--primary-dark);
   border: none;
+}
+
+.sort-order {
+  margin-left: auto;
+}
+
+.sort-order-item {
+  padding-top: 10px;
+  padding-left: 12px;
+}
+
+.sort-order-link {
+  display: block;
+  width: 11px;
+  height: 10px;
+}
+
+.sort-order-link:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
+.sort-order-link-current path {
+  fill: var(--accent);
+}
+
+.sort-order-link:hover path {
+  fill: var(--primary-dark);
+}
+
+.sort-order-link:focus path {
+  fill: var(--accent);
 }
 
 /* Catalog */
@@ -859,12 +908,22 @@ img {
   color: var(--accent);
 }
 
+.hotel-name-link:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .hotel-name-link:active {
   color: var(--primary-dark-opacity);
 }
 
 .hotel-img-link {
   margin-top: 7px;
+}
+
+.hotel-img-link:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .type-price-inner {
@@ -946,6 +1005,11 @@ img {
   background-color: var(--accent-2);
 }
 
+.details-button:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .details-button:active {
   color: var(--primary-light-opacity);
   background-color: var(--accent-3);
@@ -957,6 +1021,11 @@ img {
 
 .booking-button:hover {
   background-color: var(--special-2);
+}
+
+.booking-button:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .booking-button:active {
@@ -988,7 +1057,6 @@ img {
   width: 100%;
 }
 
-
 .page-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1019,6 +1087,12 @@ img {
   text-decoration: none;
 }
 
+.footer-link:focus,
+.footer-phone:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
+}
+
 .socials-list {
   display: flex;
   flex-wrap: wrap;
@@ -1029,7 +1103,7 @@ img {
 }
 
 .socials-item {
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .socials-item:last-of-type {
@@ -1051,6 +1125,8 @@ img {
 
 .socials-link:focus {
   background-color: var(--accent-3);
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .socials-link:focus path {
@@ -1066,6 +1142,11 @@ img {
 
 .htmlacademy-logo-link {
   padding-left: 8px;
+}
+
+.htmlacademy-logo-link:focus {
+  outline: 2px solid var(--secondary-dark);
+  outline-offset: 2px;
 }
 
 .htmlacademy-logo-link:hover path {
