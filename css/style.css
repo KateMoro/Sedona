@@ -162,7 +162,7 @@ img {
 }
 
 .main-nav-link:active {
- secondary-dark: var(--primary-dark-opacity);
+  color: var(--primary-dark-opacity);
 }
 
 
@@ -369,17 +369,23 @@ img {
 
 .hotels-booking-text {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 129px;
   line-height: 24px;
   color: var(--secondary-dark);
   text-align: center;
 }
 
-.hotels-booking-button {
-  position: relative;
+.form-inner {
+  position: absolute;
+  top: 148px;
   left: 50%;
-  transform: translate(-50%, 0);
-  padding: 30px 139px;
+  transform: translate(-50%);
+  width: 568px;
+}
+
+.hotels-booking-button {
+  padding: 30px 0;
+  width: 100%;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -387,6 +393,7 @@ img {
   text-transform: uppercase;
   background-color: var(--special);
   border: none;
+  z-index: 2;
 }
 
 .hotels-booking-button:hover {
@@ -403,16 +410,23 @@ img {
   background-color: var(--special-3);
 }
 
-/*Booking form*/
-
 .booking-form {
-  position: absolute;
-  top: 234px;
-  left: 316px;
+  visibility: hidden;
+  opacity: 0;
   padding: 55px;
-  width: 568px;
+  width: 100%;
   background-color: var(--primary-light);
   box-shadow: 0px 7px 15px var(--booking-form-shadow);
+}
+
+.booking-form-show {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.6s linear;
+}
+
+.booking-form-error {
+  animation: shake 0.5s;
 }
 
 .booking-item {
@@ -1060,13 +1074,14 @@ img {
 .page-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 33px;
   align-items: center;
+  padding: 0 72px;
   background-color: var(--footer-bg);
   text-align: center;
 }
 
 .footer-contacts {
-  padding-left: 71px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -1135,8 +1150,8 @@ img {
 
 .footer-copyright {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 65px;
   line-height: 26px;
 }
 
@@ -1155,4 +1170,28 @@ img {
 
 .htmlacademy-logo-link:focus path {
   fill: var(--htmlacademy-logo-focus);
+}
+
+/* Animations */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
