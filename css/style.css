@@ -354,13 +354,20 @@ img {
 
 /* Booking */
 .hotels-booking {
+  overflow: hidden;
+}
+
+.text-inner {
   position: relative;
+  z-index: 10;
+  background-color: var(--primary-light);
 }
 
 .hotels-booking-large-text {
-  margin-top: 55px;
+  margin: 0;
   margin-left: -10px;
-  margin-bottom: 34px;
+  padding-top: 55px;
+  padding-bottom: 34px;
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
@@ -369,22 +376,23 @@ img {
 
 .hotels-booking-text {
   margin: 0;
-  margin-bottom: 129px;
+  padding-bottom: 43px;
   line-height: 24px;
   color: var(--secondary-dark);
   text-align: center;
 }
 
 .form-inner {
-  position: absolute;
-  top: 148px;
-  left: 50%;
-  transform: translate(-50%);
+  position: relative;
   width: 568px;
+  margin: 0 auto;
+  z-index: 5;
 }
 
 .hotels-booking-button {
-  padding: 30px 0;
+  position: relative;
+  z-index: 2;
+  padding: 30px;
   width: 100%;
   font-size: 21px;
   line-height: 26px;
@@ -393,7 +401,6 @@ img {
   text-transform: uppercase;
   background-color: var(--special);
   border: none;
-  z-index: 2;
 }
 
 .hotels-booking-button:hover {
@@ -411,18 +418,19 @@ img {
 }
 
 .booking-form {
-  visibility: hidden;
-  opacity: 0;
-  padding: 55px;
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
+  padding: 55px;
   background-color: var(--primary-light);
   box-shadow: 0px 7px 15px var(--booking-form-shadow);
+  transition: all 0.5s linear;
+  transform: translateY(-100%);
 }
 
 .booking-form-show {
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.6s linear;
+  transform: translateY(0);
 }
 
 .booking-form-error {
@@ -570,11 +578,18 @@ img {
   background-color: var(--accent-3);
 }
 
+.map-inner {
+  position: relative;
+}
+
 .img-map {
-  display: none;
+  display: block;
 }
 
 .iframe-map {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   border: none;
 }

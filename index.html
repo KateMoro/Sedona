@@ -89,11 +89,13 @@
       </div>
       <section class="hotels-booking">
         <h2 class="visually-hidden">Бронирование гостиницы</h2>
-        <p class="hotels-booking-large-text">Заинтересовались?</p>
-        <p class="hotels-booking-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <div class="text-inner">
+          <p class="hotels-booking-large-text">Заинтересовались?</p>
+          <p class="hotels-booking-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
         <div class="form-inner">
           <button class="hotels-booking-button" type="button">Поиск гостиницы в Седоне</button>
-          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="booking-form booking-form-show" action="https://echo.htmlacademy.ru/" method="get">
             <div class="booking-item check-in-item">
               <label class="booking-label" for="booking-check-in-date">Дата заезда:</label>
               <div class="input-calendar-inner">
@@ -177,10 +179,12 @@
             <button class="booking-form-button" type="submit">Найти</button>
           </form>
         </div>
-        <img class="img-map" src="img/map.png" width="1199" height="593" alt="Город Седона на карте">
-        <iframe class="iframe-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839440.5419193214!2d-111.82088819030494!3d34.72876558558416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1614588550344!5m2!1sru!2sru"
-          width="1199" height="593" allowfullscreen title="Седона Аризона 86336 США"></iframe>
+        <div class="map-inner">
+          <img class="img-map" src="img/map.png" width="1199" height="593" alt="Город Седона на карте">
+          <iframe class="iframe-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839440.5419193214!2d-111.82088819030494!3d34.72876558558416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1614588550344!5m2!1sru!2sru"
+            width="1199" height="593" allowfullscreen title="Седона Аризона 86336 США"></iframe>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -239,7 +243,7 @@
       </p>
     </footer>
   </div>
-  <script src="js/booking-form.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

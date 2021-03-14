@@ -6,6 +6,8 @@ const checkOutDate = bookingForm.querySelector("[name=check-out-date]");
 const adultsNumber = bookingForm.querySelector("[name=adults]");
 const childrenNumber = bookingForm.querySelector("[name=children]");
 
+bookingForm.classList.remove("booking-form-show");
+
 bookingButton.onclick = function() {
   bookingForm.classList.toggle("booking-form-show");
   checkInDate.focus();
